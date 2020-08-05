@@ -6,6 +6,6 @@ This is part of Alexander Kallaway's [100DaysOfCode challenge](https://github.co
 
 Below are the code logs for each round of the challenge.
 
-| Code Log                                                        | Start       | End               |
-| --------------------------------------------------------------- | ----------- | ----------------- |
-| [Round 1](https://james-priest.github.io/100-days-of-code-log/) | Aug 4, 2020 | November 12, 2020 |
+| Code Log                        | Start       | End               |
+| ------------------------------- | ----------- | ----------------- |
+| [Round 1](docs/_site/log1.html) | Aug 4, 2020 | November 12, 2020 |

@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/james-priest/100-days-log.git"
+    "url": "git+https://github.com/caffeineGMT/100_days_of_code_log_r1.git"
   },
-  "author": "James Priest",
+  "author": "Maitao Guo",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/james-priest/100-days-log/issues"
+    "url": "https://github.com/caffeineGMT/100_days_of_code_log_r1/issues"
   },
-  "homepage": "https://github.com/james-priest/100-days-log#readme",
+  "homepage": "https://github.com/caffeineGMT/100_days_of_code_log_r1#readme",
   "devDependencies": {
     "grunt": "^1.0.4",
     "grunt-contrib-clean": "^1.1.0",

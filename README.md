@@ -2,9 +2,7 @@
 
 The 100 Days Code Log is [here](docs/README.md).
 
-| Code Log                                                        | Start       | End               |
-| --------------------------------------------------------------- | ----------- | ----------------- |
-| [Round 1](https://james-priest.github.io/100-days-of-code-log/) | Aug 4, 2020 | November 12, 2020 |
+---
 
 The following is showing how to use the template.The original template repo was created by [James Priest](https://github.com/james-priest/100-days-log-template). In order to implement the template on your machine, please follow the instructions below written by [James Priest](https://github.com/james-priest/100-days-log-template).
 

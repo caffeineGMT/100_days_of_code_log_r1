@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="en-US">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>100 Days of Code - Round 1
+    by Maitao</title>
+  <!-- Begin Jekyll SEO tag v2.5.0 -->
+<meta name="generator" content="Jekyll v3.7.4" />
+<meta property="og:title" content="100 Days of Code - Round 1" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="by Maitao" />
+<meta property="og:description" content="by Maitao" />
+<link rel="canonical" href="http://localhost:4000/README.html" />
+<meta property="og:url" content="http://localhost:4000/README.html" />
+<meta property="og:site_name" content="100 Days of Code Log" />
+<script type="application/ld+json">
+{"headline":"100 Days of Code - Round 1","url":"http://localhost:4000/README.html","description":"by Maitao","@type":"WebPage","@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+  <link rel="stylesheet" href="/assets/css/style.css?v=7e86742a2ce566d74b741fafc7bd6b47031d2f93">
+  <script src="https://code.jquery.com/jquery-3.3.0.min.js"
+    integrity="sha256-RTQy8VOmNlT6b2PIRur37p6JEBZUE7o8wPgMvu18MC4=" crossorigin="anonymous"></script>
+  <script src="/assets/js/main.js"></script>
+  <!--[if lt IE 9]>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js" integrity="sha256-3Jy/GbSLrg0o9y5Z5n1uw0qxZECH7C6OQpVBgNFYa0g=" crossorigin="anonymous"></script>
+    <![endif]-->
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+  <style>
+    body {
+      background: {
+          {
+          page.pg_bk_color
+        }
+      }
+
+      ;
+    }
+
+    header {
+      background: {
+          {
+          page.header_bk_color
+        }
+      }
+
+      ;
+    }
+
+    a {
+      color: {
+          {
+          page.link_color
+        }
+      }
+
+      ;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    
+    <h1>100 Days of Code - Round 1</h1>
+    <p>by Maitao</p>
+    
+  </header>
+
+  <div id="banner">
+    <span id="logo"></span>
+
+    <a href="https://github.com/caffeineGMT/100_days_of_code_log_r1" class="button fork"><strong>View On GitHub</strong></a>
+    
+  </div><!-- end banner -->
+
+  <div class="wrapper">
+    <nav>
+      <ul></ul>
+    </nav>
+    <section>
+      <!-- markdownlint-disable MD022 MD024 MD032 MD033 -->
+
+<h1 id="100-days-of-code">100 Days of Code</h1>
+
+<!-- <p class="toc"><a href="./index.html">&lt;– back to Table of Contents</a></p> -->
+
+<table>
+  <thead>
+    <tr>
+      <th>Code Log</th>
+      <th>Start</th>
+      <th>End</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>this log</td>
+      <td>Aug 4, 2020</td>
+      <td>November 12, 2020</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="challenge--commitment">Challenge &amp; Commitment</h2>
+
+<p>This is part of Alexander Kallaway’s <a href="https://github.com/Kallaway/100-days-of-code" title="the official repo">100DaysOfCode</a> challenge. More details about the challenge can be found here: <a href="http://100daysofcode.com/" title="100daysofcode.com">100daysofcode.com</a>.</p>
+
+<p><strong>Commitment:</strong> <em>I will code daily for the next 100 days.</em></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Start Date</th>
+      <th>End Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Aug 4, 2020</td>
+      <td>November 12, 2020</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="goals">Goals</h2>
+
+<ul class="task-list">
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Code daily</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Finish Code with Mosh “Java” Series</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Finish Code with Mosh “React” Series</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Finish Udacity React Projects</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Finish Machine Learning Specialization</li>
+</ul>
+
+<h1 id="code-log">Code Log</h1>
+
+<hr />
+
+<h2 id="1-java-iterable-interface">1. Java Iterable Interface</h2>
+
+<h3 id="day-1-august-4th-2020---tuesday">Day 1: August 4th, 2020 - Tuesday</h3>
+
+<p><strong>Project:</strong> Using Java Iterable interface</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">GenericList</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="kd">implements</span> <span class="n">Iterable</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="o">{</span>
+    <span class="kd">private</span> <span class="n">T</span><span class="o">[]</span> <span class="n">items</span> <span class="o">=</span> <span class="o">(</span><span class="n">T</span><span class="o">[])</span> <span class="k">new</span> <span class="n">Object</span><span class="o">[</span><span class="mi">10</span><span class="o">];</span>
+    <span class="kd">private</span> <span class="kt">int</span> <span class="n">count</span><span class="o">;</span>
+
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">add</span><span class="o">(</span><span class="n">T</span> <span class="n">item</span><span class="o">)</span> <span class="o">{</span>
+        <span class="n">items</span><span class="o">[</span><span class="n">count</span><span class="o">++]</span> <span class="o">=</span> <span class="n">item</span><span class="o">;</span>
+    <span class="o">}</span>
+
+    <span class="kd">public</span> <span class="n">T</span> <span class="nf">get</span><span class="o">(</span><span class="kt">int</span> <span class="n">index</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">return</span> <span class="n">items</span><span class="o">[</span><span class="n">index</span><span class="o">];</span>
+    <span class="o">}</span>
+
+    <span class="nd">@Override</span>
+    <span class="kd">public</span> <span class="n">Iterator</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="nf">iterator</span><span class="o">()</span> <span class="o">{</span>
+        <span class="k">return</span> <span class="k">new</span> <span class="nf">ListIterator</span><span class="o">(</span><span class="k">this</span><span class="o">);</span>
+    <span class="o">}</span>
+
+    <span class="kd">private</span> <span class="kd">class</span> <span class="nc">ListIterator</span> <span class="kd">implements</span> <span class="n">Iterator</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="o">{</span>
+        <span class="kd">private</span> <span class="n">GenericList</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="n">list</span><span class="o">;</span>
+        <span class="kd">private</span> <span class="kt">int</span> <span class="n">index</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
+
+        <span class="kd">public</span> <span class="nf">ListIterator</span><span class="o">(</span><span class="n">GenericList</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="n">list</span><span class="o">)</span> <span class="o">{</span>
+            <span class="k">this</span><span class="o">.</span><span class="na">list</span> <span class="o">=</span> <span class="n">list</span><span class="o">;</span>
+        <span class="o">}</span>
+
+        <span class="nd">@Override</span>
+        <span class="kd">public</span> <span class="kt">boolean</span> <span class="nf">hasNext</span><span class="o">()</span> <span class="o">{</span>
+            <span class="k">return</span> <span class="n">index</span> <span class="o">&lt;</span> <span class="n">list</span><span class="o">.</span><span class="na">count</span><span class="o">;</span>
+        <span class="o">}</span>
+
+        <span class="nd">@Override</span>
+        <span class="kd">public</span> <span class="n">T</span> <span class="nf">next</span><span class="o">()</span> <span class="o">{</span>
+            <span class="k">return</span> <span class="n">list</span><span class="o">.</span><span class="na">items</span><span class="o">[</span><span class="n">index</span><span class="o">++];</span>
+            <span class="c1">// return list.get[index++];</span>
+        <span class="o">}</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p><strong>Progress:</strong></p>
+
+<ul>
+  <li>for each loop rely on the the iterable interface and using iterator internally to do iteration</li>
+  <li>first we need to implement Iterable interface</li>
+  <li>second we need to implement a Iterator interface to generate a iterator</li>
+  <li>The reason why we use the private class for ListIterator here is that the generic type T can be passed down from the moment we create a GenericList</li>
+</ul>
+
+<p><strong>Links:</strong> <a href="https://github.com/caffeineGMT/Java_Learning/blob/master/UltimateJava_Part3/src/com/codewithmosh/collections/GenericList.java">Solution repo</a></p>
+
+<hr />
+
+
+    </section>
+    <footer>
+      
+      <p>Project maintained by <a href="https://github.com/caffeineGMT">caffeineGMT</a></p>
+      
+      <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://twitter.com/mattgraham">mattgraham</a></small>
+      </p>
+    </footer>
+  </div>
+
+  
+  <script>
+    (function (i, s, o, g, r, a, m) {
+      i['GoogleAnalyticsObject'] = r;
+      i[r] = i[r] || function () {
+        (i[r].q = i[r].q || []).push(arguments)
+      }, i[r].l = 1 * new Date();
+      a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0];
+      a.async = 1;
+      a.src = g;
+      m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+    ga('create', 'UA-121627234-4', 'auto');
+    ga('send', 'pageview');
+  </script>
+  
+</body>
+
+</html>

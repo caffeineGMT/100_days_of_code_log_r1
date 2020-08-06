@@ -1,8 +1,10 @@
-# 100 Days Log Template<!-- omit in toc -->
+# 100 Days Code Log
 
 The 100 Days Code Log is [here](docs/README.md).
 
 ---
+
+# 100 Days Code Log Template
 
 The following is showing how to use the template.The original template repo was created by [James Priest](https://github.com/james-priest/100-days-log-template). In order to implement the template on your machine, please follow the instructions below written by [James Priest](https://github.com/james-priest/100-days-log-template).
 
@@ -10,23 +12,25 @@ This repo is used to track progress for Alexander Kallaway's 100 Days of Code Ch
 
 It's made available to anyone that would like to fork this repo in order to also track their progress using GitHub Pages. It uses a customized version of the [Leap day theme](https://github.com/pages-themes/leap-day) (see preview [here](https://pages-themes.github.io/leap-day/)) and allows simple customization of page titles & colors schemes.
 
-- [Overview](#overview)
-- [Getting Started](#getting-started)
-  - [Prerequisites](#prerequisites)
-  - [Installation](#installation)
-- [Usage](#usage)
-  - [Serve site](#serve-site)
-  - [Serve site (with with live-reload)](#serve-site-with-with-live-reload)
-- [Deployment](#deployment)
-- [Enable GitHub Pages](#enable-github-pages)
-- [Optimize Images](#optimize-images)
-  - [Grunt Install](#grunt-install)
-  - [Grunt Usage](#grunt-usage)
-  - [Embedding Images in Log](#embedding-images-in-log)
-- [Log Customization](#log-customization)
-- [Miscellaneous](#miscellaneous)
-  - [Recommended Workflow](#recommended-workflow)
-  - [Under the Hood](#under-the-hood)
+- [100 Days Code Log](#100-days-code-log)
+- [100 Days Code Log Template](#100-days-code-log-template)
+  - [Overview](#overview)
+  - [Getting Started](#getting-started)
+    - [Prerequisites](#prerequisites)
+    - [Installation](#installation)
+  - [Usage](#usage)
+    - [Serve site](#serve-site)
+    - [Serve site (with with live-reload)](#serve-site-with-with-live-reload)
+  - [Deployment](#deployment)
+  - [Enable GitHub Pages](#enable-github-pages)
+  - [Optimize Images](#optimize-images)
+    - [Grunt Install](#grunt-install)
+    - [Grunt Usage](#grunt-usage)
+    - [Embedding Images in Log](#embedding-images-in-log)
+  - [Log Customization](#log-customization)
+  - [Miscellaneous](#miscellaneous)
+    - [Recommended Workflow](#recommended-workflow)
+    - [Under the Hood](#under-the-hood)
 
 ## Overview
 

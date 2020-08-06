@@ -4,19 +4,19 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>100 Days of Code - Round 1
-    by Maitao</title>
+  <title>100 Days of Code Round 1
+    by Maitao Guo</title>
   <!-- Begin Jekyll SEO tag v2.5.0 -->
 <meta name="generator" content="Jekyll v3.7.4" />
-<meta property="og:title" content="100 Days of Code - Round 1" />
+<meta property="og:title" content="100 Days of Code Round 1" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="by Maitao" />
-<meta property="og:description" content="by Maitao" />
-<link rel="canonical" href="http://localhost:4000/README.html" />
-<meta property="og:url" content="http://localhost:4000/README.html" />
+<meta name="description" content="by Maitao Guo" />
+<meta property="og:description" content="by Maitao Guo" />
+<link rel="canonical" href="http://localhost:4000/log1.html" />
+<meta property="og:url" content="http://localhost:4000/log1.html" />
 <meta property="og:site_name" content="100 Days of Code Log" />
 <script type="application/ld+json">
-{"headline":"100 Days of Code - Round 1","url":"http://localhost:4000/README.html","description":"by Maitao","@type":"WebPage","@context":"http://schema.org"}</script>
+{"headline":"100 Days of Code Round 1","url":"http://localhost:4000/log1.html","description":"by Maitao Guo","@type":"WebPage","@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
   <link rel="stylesheet" href="/assets/css/style.css?v=7e86742a2ce566d74b741fafc7bd6b47031d2f93">
@@ -64,8 +64,8 @@
 
   <header>
     
-    <h1>100 Days of Code - Round 1</h1>
-    <p>by Maitao</p>
+    <h1>100 Days of Code Round 1</h1>
+    <p>by Maitao Guo</p>
     
   </header>
 
@@ -83,9 +83,9 @@
     <section>
       <!-- markdownlint-disable MD022 MD024 MD032 MD033 -->
 
-<h1 id="100-days-of-code">100 Days of Code</h1>
+<h1 id="description">Description</h1>
 
-<!-- <p class="toc"><a href="./index.html">&lt;– back to Table of Contents</a></p> -->
+<p class="toc"><a href="./index.html">&lt;– back to Table of Contents</a></p>
 
 <table>
   <thead>
@@ -106,9 +106,9 @@
 
 <h2 id="challenge--commitment">Challenge &amp; Commitment</h2>
 
-<p>This is part of Alexander Kallaway’s <a href="https://github.com/Kallaway/100-days-of-code" title="the official repo">100DaysOfCode</a> challenge. More details about the challenge can be found here: <a href="http://100daysofcode.com/" title="100daysofcode.com">100daysofcode.com</a>.</p>
+<p>Challenge: This is part of Alexander Kallaway’s <a href="https://github.com/Kallaway/100-days-of-code" title="the official repo">100DaysOfCode</a> challenge. More details about the challenge can be found here: <a href="http://100daysofcode.com/" title="100daysofcode.com">100daysofcode.com</a>.</p>
 
-<p><strong>Commitment:</strong> <em>I will code daily for the next 100 days.</em></p>
+<p>Commitment: I will code daily for the next 100 days.</p>
 
 <table>
   <thead>
@@ -135,15 +135,69 @@
   <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Finish Machine Learning Specialization</li>
 </ul>
 
-<h1 id="code-log">Code Log</h1>
-
 <hr />
 
-<h2 id="1-java-iterable-interface">1. Java Iterable Interface</h2>
+<h1 id="code-log">Code Log</h1>
 
-<h3 id="day-1-august-4th-2020---tuesday">Day 1: August 4th, 2020 - Tuesday</h3>
+<h2 id="day-2-java-interface-reference-variable">Day 2. Java Interface reference variable</h2>
 
-<p><strong>Project:</strong> Using Java Iterable interface</p>
+<h3 id="august-5th-2020---wednesday">August 5th, 2020 - Wednesday</h3>
+
+<p><strong>Project Description:</strong> It is confusing to see statement below:</p>
+
+<p><code class="highlighter-rouge">Printable objParent = new Parent();</code> where Printable is an interface, Parent implement it. But when creating a reference variable, we create an interface type and assign it to a class instance which implement the interface.</p>
+
+<p>The complete code snippet is below:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">OverridenClass</span>
+<span class="o">{</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span>
+    <span class="o">{</span>
+     <span class="n">Printable</span> <span class="n">objParent</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Parent</span><span class="o">();</span>
+     <span class="n">objParent</span><span class="o">.</span><span class="na">sysout</span><span class="o">();</span>
+     <span class="n">objParent</span><span class="o">.</span><span class="na">displayName</span><span class="o">();</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+
+<span class="kd">interface</span> <span class="nc">Printable</span>
+<span class="o">{</span>
+    <span class="kt">void</span> <span class="nf">sysout</span><span class="o">();</span>
+<span class="o">}</span>
+
+<span class="kd">class</span> <span class="nc">Parent</span> <span class="kd">implements</span> <span class="n">Printable</span>
+<span class="o">{</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">displayName</span><span class="o">()</span>
+    <span class="o">{</span>
+     <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"This is Parent Name"</span><span class="o">);</span>
+    <span class="o">}</span>
+
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">sysout</span><span class="o">()</span>
+    <span class="o">{</span>
+        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"I am Printable Interface in Parent Class"</span><span class="o">);</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p><strong>Notes:</strong></p>
+
+<ul>
+  <li>Interface is like a class, but no concrete implementation. Other than that, they are very much alike when using.</li>
+  <li>Interface type is like abstract method, force whoever implement it to provide concreted implementation</li>
+  <li>The Printable Interface is like the parent class of Parent class. So when using Printable interface reference type to assign to an instance, this instance can only access the method belongs to the Printable Interface portion. In this case, it can only access sysout() method.</li>
+</ul>
+
+<p><strong>Links:</strong></p>
+
+<ul>
+  <li>see <a href="https://stackoverflow.com/questions/14997202/creating-object-with-reference-to-interface">stackoverflow question</a></li>
+  <li>see <a href="https://docs.oracle.com/javase/tutorial/java/IandI/interfaceAsType.html">Oracle doc</a></li>
+</ul>
+
+<h2 id="day-1-java-iterable-interface">Day 1. Java Iterable Interface</h2>
+
+<h3 id="august-4th-2020---tuesday">August 4th, 2020 - Tuesday</h3>
+
+<p><strong>Project Description:</strong> trying to understand Java Iterable and Iterator interface</p>
 
 <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">GenericList</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="kd">implements</span> <span class="n">Iterable</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="o">{</span>
     <span class="kd">private</span> <span class="n">T</span><span class="o">[]</span> <span class="n">items</span> <span class="o">=</span> <span class="o">(</span><span class="n">T</span><span class="o">[])</span> <span class="k">new</span> <span class="n">Object</span><span class="o">[</span><span class="mi">10</span><span class="o">];</span>
@@ -184,7 +238,7 @@
 <span class="o">}</span>
 </code></pre></div></div>
 
-<p><strong>Progress:</strong></p>
+<p><strong>Notes:</strong></p>
 
 <ul>
   <li>for each loop rely on the the iterable interface and using iterator internally to do iteration</li>

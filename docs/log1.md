@@ -38,11 +38,24 @@ Commitment: I will code daily for the next 100 days.
 
 # Code Log
 
+## Day3. Main method in Java
+
+**Project:** Question: Can I have main method in different class? Can it be used for testing if each class has a main method? How does program start by JVM?
+
+**Notes:**
+- main method can exist in each class, it is just a starting point of a program
+- multiple main methods existed in different class can be called simultaneously
+- multiple main methods existed in different class can be used for unit testing
+
+**Links:**
+- [solution repo]()
+- see [explanation](https://csis.pace.edu/~bergin/KarelJava2ed/ch2/javamain.html#:~:text=In%20Java%2C%20you%20need%20to,in%20a%20real%20Java%20program.)
+
 ## Day 2_b. Java Interface reference variable
 
 ### August 5th, 2020 - Wednesday
 
-**Project Description:** It is confusing to see statement below:
+**Project:** It is confusing to see statement below:
 
 `Printable objParent = new Parent();` where Printable is an interface, Parent implement it. But when creating a reference variable, we create an interface type and assign it to a class instance which implement the interface.
 

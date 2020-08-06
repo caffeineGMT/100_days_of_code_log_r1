@@ -8,9 +8,9 @@ description: by Maitao Guo
 
 <!-- markdownlint-disable MD022 MD024 MD032 MD033 -->
 
-# Description
-
 <p class="toc"><a href="./index.html">&lt;– back to Table of Contents</a></p>
+
+# Description
 
 | Code Log | Start       | End               |
 | -------- | ----------- | ----------------- |
@@ -38,7 +38,7 @@ Commitment: I will code daily for the next 100 days.
 
 # Code Log
 
-## Day 2. Java Interface reference variable
+## Day 2_b. Java Interface reference variable
 
 ### August 5th, 2020 - Wednesday
 
@@ -88,6 +88,34 @@ class Parent implements Printable
 
 - see [stackoverflow question](https://stackoverflow.com/questions/14997202/creating-object-with-reference-to-interface)
 - see [Oracle doc](https://docs.oracle.com/javase/tutorial/java/IandI/interfaceAsType.html)
+
+## Day 2_a. Java Interface reference variable
+
+### August 5th, 2020 - Wednesday
+
+**Project:** Finish the Collection Interface chapter on Ultimate Java Series from Code with Mosh
+
+**Notes:**
+
+[Code Solution](https://github.com/caffeineGMT/Java_Learning/tree/master/UltimateJava_Part3/src/com/codewithmosh/collections)
+
+Interface Hierarchy
+![Hierarchy](assets/images/D2_1.png)
+Following this hierarchy path, there is another corresponding path of abstract class to provide skeleton implementation details, in order to minimize the effort the implementation of bottom interface. See [link](https://docs.oracle.com/javase/8/docs/api/java/util/ArrayList.html)
+
+- Iterable: See GenericList code solution
+- Iterator: See GenericList code solution
+- Collection
+- List: Using `List<E>` interface, usually implement `ArrayList<E>` class
+- Comparable
+- Comparator
+- Queue: Using `Queue<E>` interface, usually implement `ArrayDeque<E>` class
+- Set: Using `Set` interface, usually implement `HashSet<E>` class
+- Hash Table: using `Map<K,V>` interface, usually we use `HashMap<K,V>` class. Map is not iterable, if we want to iterate value/key, we need to call several method from map instance.
+
+  | Java | Python     | JavaScript | C#         |
+  | ---- | ---------- | ---------- | ---------- |
+  | Maps | Dictionary | Objects    | Dictionary |
 
 ## Day 1. Java Iterable Interface
 

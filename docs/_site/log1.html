@@ -14,12 +14,12 @@
 <meta property="og:description" content="by Maitao Guo" />
 <link rel="canonical" href="http://localhost:4000/log1.html" />
 <meta property="og:url" content="http://localhost:4000/log1.html" />
-<meta property="og:site_name" content="100 Days of Code Log" />
+<meta property="og:site_name" content="100 Days of Code Log Round 1" />
 <script type="application/ld+json">
-{"headline":"100 Days of Code Round 1","url":"http://localhost:4000/log1.html","description":"by Maitao Guo","@type":"WebPage","@context":"http://schema.org"}</script>
+{"url":"http://localhost:4000/log1.html","headline":"100 Days of Code Round 1","description":"by Maitao Guo","@type":"WebPage","@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
-  <link rel="stylesheet" href="/assets/css/style.css?v=7e86742a2ce566d74b741fafc7bd6b47031d2f93">
+  <link rel="stylesheet" href="/assets/css/style.css?v=ff645acc8912e21caf33e0e9232f8ece96a6d5c4">
   <script src="https://code.jquery.com/jquery-3.3.0.min.js"
     integrity="sha256-RTQy8VOmNlT6b2PIRur37p6JEBZUE7o8wPgMvu18MC4=" crossorigin="anonymous"></script>
   <script src="/assets/js/main.js"></script>
@@ -83,9 +83,9 @@
     <section>
       <!-- markdownlint-disable MD022 MD024 MD032 MD033 -->
 
-<h1 id="description">Description</h1>
-
 <p class="toc"><a href="./index.html">&lt;– back to Table of Contents</a></p>
+
+<h1 id="description">Description</h1>
 
 <table>
   <thead>
@@ -139,7 +139,7 @@
 
 <h1 id="code-log">Code Log</h1>
 
-<h2 id="day-2-java-interface-reference-variable">Day 2. Java Interface reference variable</h2>
+<h2 id="day-2_b-java-interface-reference-variable">Day 2_b. Java Interface reference variable</h2>
 
 <h3 id="august-5th-2020---wednesday">August 5th, 2020 - Wednesday</h3>
 
@@ -191,6 +191,53 @@
 <ul>
   <li>see <a href="https://stackoverflow.com/questions/14997202/creating-object-with-reference-to-interface">stackoverflow question</a></li>
   <li>see <a href="https://docs.oracle.com/javase/tutorial/java/IandI/interfaceAsType.html">Oracle doc</a></li>
+</ul>
+
+<h2 id="day-2_a-java-interface-reference-variable">Day 2_a. Java Interface reference variable</h2>
+
+<h3 id="august-5th-2020---wednesday-1">August 5th, 2020 - Wednesday</h3>
+
+<p><strong>Project:</strong> Finish the Collection Interface chapter on Ultimate Java Series from Code with Mosh</p>
+
+<p><strong>Notes:</strong></p>
+
+<p><a href="https://github.com/caffeineGMT/Java_Learning/tree/master/UltimateJava_Part3/src/com/codewithmosh/collections">Code Solution</a></p>
+
+<p>Interface Hierarchy
+<img src="/assets/images/D2_1.png" alt="Hierarchy" />
+Following this hierarchy path, there is another corresponding path of abstract class to provide skeleton implementation details, in order to minimize the effort the implementation of bottom interface. See <a href="https://docs.oracle.com/javase/8/docs/api/java/util/ArrayList.html">link</a></p>
+
+<ul>
+  <li>Iterable: See GenericList code solution</li>
+  <li>Iterator: See GenericList code solution</li>
+  <li>Collection</li>
+  <li>List: Using <code class="highlighter-rouge">List&lt;E&gt;</code> interface, usually implement <code class="highlighter-rouge">ArrayList&lt;E&gt;</code> class</li>
+  <li>Comparable</li>
+  <li>Comparator</li>
+  <li>Queue: Using <code class="highlighter-rouge">Queue&lt;E&gt;</code> interface, usually implement <code class="highlighter-rouge">ArrayDeque&lt;E&gt;</code> class</li>
+  <li>Set: Using <code class="highlighter-rouge">Set</code> interface, usually implement <code class="highlighter-rouge">HashSet&lt;E&gt;</code> class</li>
+  <li>
+    <p>Hash Table: using <code class="highlighter-rouge">Map&lt;K,V&gt;</code> interface, usually we use <code class="highlighter-rouge">HashMap&lt;K,V&gt;</code> class. Map is not iterable, if we want to iterate value/key, we need to call several method from map instance.</p>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Java</th>
+          <th>Python</th>
+          <th>JavaScript</th>
+          <th>C#</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Maps</td>
+          <td>Dictionary</td>
+          <td>Objects</td>
+          <td>Dictionary</td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
 </ul>
 
 <h2 id="day-1-java-iterable-interface">Day 1. Java Iterable Interface</h2>

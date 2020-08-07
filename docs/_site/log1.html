@@ -19,7 +19,7 @@
 {"url":"http://localhost:4000/log1.html","headline":"100 Days of Code Round 1","description":"by Maitao Guo","@type":"WebPage","@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
-  <link rel="stylesheet" href="/assets/css/style.css?v=de4661b10b5a1319e2d70175a9c7c18ac435da47">
+  <link rel="stylesheet" href="/assets/css/style.css?v=f5b97255d65182aa1f1af590424400d301ae2463">
   <script src="https://code.jquery.com/jquery-3.3.0.min.js"
     integrity="sha256-RTQy8VOmNlT6b2PIRur37p6JEBZUE7o8wPgMvu18MC4=" crossorigin="anonymous"></script>
   <script src="/assets/js/main.js"></script>
@@ -130,22 +130,109 @@
 <ul class="task-list">
   <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Code daily</li>
   <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Finish Code with Mosh “Java” Series</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Finish Code with Mosh “JavaScript” Series</li>
   <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Finish Code with Mosh “React” Series</li>
   <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Finish Udacity React Projects</li>
   <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Finish Machine Learning Specialization</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Finish Machine Learning edx course from UT Austin</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />code 200 solutions for algorithm interview preparation at LeetCode/LintCode</li>
 </ul>
 
 <hr />
 
 <h1 id="code-log">Code Log</h1>
 
-<h2 id="day3-main-method-in-java">Day3. Main method in Java</h2>
+<h2 id="day3_b-java-lambda-expression-and-functional-interface">Day3_b. Java Lambda Expression and Functional Interface</h2>
+
+<h3 id="august-6th-2020---thursday">August 6th, 2020 - Thursday</h3>
+
+<p><strong>Project:</strong></p>
+
+<p><strong>Notes:</strong></p>
+
+<ul>
+  <li>anonymous inner class</li>
+  <li>lambda expression: lambda expression is actually an object. The difference between anonymous inner class and lambda expression is that lambda expression can not have fields and cannot save states while anonymous inner class can do it. And the <code class="highlighter-rouge">this</code> keyword means differently. In anonymous inner class, <code class="highlighter-rouge">this</code> points to the current anonymous class instance while lambda expression’s <code class="highlighter-rouge">this</code> points to current class instance.</li>
+</ul>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<span class="kn">package</span> <span class="n">com</span><span class="o">.</span><span class="na">codewithmosh</span><span class="o">.</span><span class="na">lambdas</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">java.util.function.UnaryOperator</span><span class="o">;</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">LambdasDemo</span> <span class="o">{</span>
+  <span class="c1">// instance field</span>
+  <span class="kd">public</span> <span class="n">String</span> <span class="n">prefix</span> <span class="o">=</span> <span class="s">"-"</span><span class="o">;</span>
+
+  <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">show</span><span class="o">()</span> <span class="o">{</span>
+    <span class="c1">// anonymous inner class</span>
+    <span class="n">greet</span><span class="o">(</span><span class="k">new</span> <span class="n">Printer</span><span class="o">()</span> <span class="o">{</span>
+      <span class="nd">@Override</span>
+      <span class="kd">public</span> <span class="kt">void</span> <span class="nf">print</span><span class="o">(</span><span class="n">String</span> <span class="n">message</span><span class="o">)</span> <span class="o">{</span>
+        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">message</span><span class="o">);</span>
+        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="k">this</span><span class="o">.</span><span class="na">getClass</span><span class="o">());</span>
+      <span class="o">}</span>
+    <span class="o">});</span>
+
+    <span class="c1">// lambda expression</span>
+    <span class="n">greet</span><span class="o">(</span><span class="n">message</span> <span class="o">-&gt;</span> <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">message</span><span class="o">));</span>
+    <span class="n">Printer</span> <span class="n">printer</span> <span class="o">=</span> <span class="n">message</span> <span class="o">-&gt;</span> <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">message</span><span class="o">);</span>
+  <span class="o">}</span>
+
+  <span class="kd">public</span> <span class="kt">void</span> <span class="nf">showAnother</span><span class="o">()</span> <span class="o">{</span>
+    <span class="c1">// variable capture</span>
+    <span class="n">greet</span><span class="o">(</span><span class="n">message</span> <span class="o">-&gt;</span> <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">message</span> <span class="o">+</span> <span class="k">this</span><span class="o">.</span><span class="na">getClass</span><span class="o">()));</span>
+  <span class="o">}</span>
+
+  <span class="c1">// code against interface</span>
+  <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">greet</span><span class="o">(</span><span class="n">Printer</span> <span class="n">printer</span><span class="o">)</span> <span class="o">{</span>
+    <span class="n">printer</span><span class="o">.</span><span class="na">print</span><span class="o">(</span><span class="s">"Hello World"</span><span class="o">);</span>
+  <span class="o">}</span>
+
+  <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+    <span class="n">show</span><span class="o">();</span>
+    <span class="k">new</span> <span class="nf">LambdasDemo</span><span class="o">().</span><span class="na">showAnother</span><span class="o">();</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<ul>
+  <li>Method Reference: following this format: Class/Object::method, this could be used for replacing lambda expression with existing method</li>
+</ul>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">greet</span><span class="o">(</span><span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">::</span><span class="n">println</span><span class="o">);</span>
+<span class="n">greet</span><span class="o">(</span><span class="nl">LambdasDemo:</span><span class="o">:</span><span class="n">printer1</span><span class="o">);</span><span class="c1">// class method reference</span>
+<span class="n">greet</span><span class="o">(</span><span class="k">new</span> <span class="n">LambdasDemo</span><span class="o">()::</span><span class="n">printer2</span><span class="o">);</span><span class="c1">// instance method reference </span>
+<span class="n">greet</span><span class="o">(</span><span class="nl">LambdasDemo:</span><span class="o">:</span><span class="k">new</span><span class="o">);</span><span class="c1">//constructor method reference</span>
+</code></pre></div></div>
+
+<p>There are 4 types of built-in functional interface: consumer, supplier, function and predicates.</p>
+
+<p>The reason why we use functional interface: <a href="https://www.journaldev.com/2763/java-8-functional-interfaces#:~:text=The%20major%20benefit%20of%20java,a%20lot%20of%20functional%20interfaces.">answer</a></p>
+
+<p>I still do not fully understand the actual use case of functional interface. My best guess is the same as the reason why we use interface, that is, coding against interface. And for customized implementation, we could provide later.</p>
+
+<p><strong>Links:</strong></p>
+
+<p><a href="https://github.com/caffeineGMT/Java_Learning/tree/master/UltimateJava_Part3/src/com/codewithmosh/lambdas">exercise repo</a></p>
+
+<h2 id="day3_a-main-method-in-java">Day3_a. Main method in Java</h2>
+
+<h3 id="august-6th-2020---thursday-1">August 6th, 2020 - Thursday</h3>
 
 <p><strong>Project:</strong> Question: Can I have main method in different class? Can it be used for testing if each class has a main method? How does program start by JVM?</p>
 
 <p><strong>Notes:</strong></p>
+<ul>
+  <li>main method can exist in each class, it is just a starting point of a program</li>
+  <li>multiple main methods existed in different class can be called simultaneously</li>
+  <li>multiple main methods existed in different class can be used for unit testing</li>
+</ul>
 
 <p><strong>Links:</strong></p>
+<ul>
+  <li><a href="https://github.com/caffeineGMT/Java_Learning/tree/master/UltimateJava_Part3/src/com/codewithmosh/MainMethodTesting">solution repo</a></li>
+  <li>see <a href="https://csis.pace.edu/~bergin/KarelJava2ed/ch2/javamain.html#:~:text=In%20Java%2C%20you%20need%20to,in%20a%20real%20Java%20program.">explanation</a></li>
+</ul>
 
 <h2 id="day-2_b-java-interface-reference-variable">Day 2_b. Java Interface reference variable</h2>
 

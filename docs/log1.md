@@ -30,15 +30,91 @@ Commitment: I will code daily for the next 100 days.
 
 - [x] Code daily
 - [ ] Finish Code with Mosh "Java" Series
+- [ ] Finish Code with Mosh "JavaScript" Series
 - [ ] Finish Code with Mosh "React" Series
 - [ ] Finish Udacity React Projects
 - [ ] Finish Machine Learning Specialization
+- [ ] Finish Machine Learning edx course from UT Austin
+- [ ] code 200 solutions for algorithm interview preparation at LeetCode/LintCode
 
 ---
 
 # Code Log
 
-## Day3. Main method in Java
+## Day3_b. Java Lambda Expression and Functional Interface
+
+### August 6th, 2020 - Thursday
+
+**Project:**
+
+**Notes:**
+
+- anonymous inner class
+- lambda expression: lambda expression is actually an object. The difference between anonymous inner class and lambda expression is that lambda expression can not have fields and cannot save states while anonymous inner class can do it. And the `this` keyword means differently. In anonymous inner class, `this` points to the current anonymous class instance while lambda expression's `this` points to current class instance.
+  
+```java
+
+package com.codewithmosh.lambdas;
+import java.util.function.UnaryOperator;
+
+public class LambdasDemo {
+  // instance field
+  public String prefix = "-";
+
+  public static void show() {
+    // anonymous inner class
+    greet(new Printer() {
+      @Override
+      public void print(String message) {
+        System.out.println(message);
+        System.out.println(this.getClass());
+      }
+    });
+
+    // lambda expression
+    greet(message -> System.out.println(message));
+    Printer printer = message -> System.out.println(message);
+  }
+
+  public void showAnother() {
+    // variable capture
+    greet(message -> System.out.println(message + this.getClass()));
+  }
+
+  // code against interface
+  public static void greet(Printer printer) {
+    printer.print("Hello World");
+  }
+
+  public static void main(String[] args) {
+    show();
+    new LambdasDemo().showAnother();
+  }
+}
+```
+
+- Method Reference: following this format: Class/Object::method, this could be used for replacing lambda expression with existing method
+
+```java
+greet(System.out::println);
+greet(LambdasDemo::printer1);// class method reference
+greet(new LambdasDemo()::printer2);// instance method reference 
+greet(LambdasDemo::new);//constructor method reference
+```
+
+There are 4 types of built-in functional interface: consumer, supplier, function and predicates.
+
+The reason why we use functional interface: [answer](https://www.journaldev.com/2763/java-8-functional-interfaces#:~:text=The%20major%20benefit%20of%20java,a%20lot%20of%20functional%20interfaces.)
+
+I still do not fully understand the actual use case of functional interface. My best guess is the same as the reason why we use interface, that is, coding against interface. And for customized implementation, we could provide later.
+
+**Links:**
+
+[exercise repo](https://github.com/caffeineGMT/Java_Learning/tree/master/UltimateJava_Part3/src/com/codewithmosh/lambdas)
+
+## Day3_a. Main method in Java
+
+### August 6th, 2020 - Thursday
 
 **Project:** Question: Can I have main method in different class? Can it be used for testing if each class has a main method? How does program start by JVM?
 
@@ -48,7 +124,7 @@ Commitment: I will code daily for the next 100 days.
 - multiple main methods existed in different class can be used for unit testing
 
 **Links:**
-- [solution repo]()
+- [solution repo](https://github.com/caffeineGMT/Java_Learning/tree/master/UltimateJava_Part3/src/com/codewithmosh/MainMethodTesting)
 - see [explanation](https://csis.pace.edu/~bergin/KarelJava2ed/ch2/javamain.html#:~:text=In%20Java%2C%20you%20need%20to,in%20a%20real%20Java%20program.)
 
 ## Day 2_b. Java Interface reference variable
